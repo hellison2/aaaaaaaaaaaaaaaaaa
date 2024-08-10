@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Actor&family=Candal&display=swap');
+
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -52,6 +52,8 @@ table {
 
 
 /* ------------------------GLOBAL STYLES--------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Actor&family=Candal&display=swap');
+
 :root{
   --blue: #27668c;
   --light-green: #bfb630;
@@ -147,7 +149,7 @@ nav a{
 }
 
 .active{
-  text-decoration: underline var(--light-green);
+  text-decoration: underline var(--white);
   text-decoration-thickness: 3px;
 }
 
@@ -155,11 +157,20 @@ p{
   margin: 0 auto;
 }
 
+#homeMain img{
+  width: 50%;
+  padding-top: 20px;
+}
+
 #homeMain p{
   padding: 1rem;
+  width: 70%;
 }
 
 #aboutPlants{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   background-color: var(--blue);
 }
 
@@ -175,6 +186,20 @@ p{
 footer section{
   max-width: 275px;
   margin: 1rem auto 0 auto;
+}
+
+footer div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+footer section:first-of-type {
+  order: 2;
+  text-align: left;
+}
+
+footer section:nth-of-type(2) {
+  order: 1;
 }
 
 footer h2:first-of-type{
@@ -290,6 +315,7 @@ header img{
 }
 
 @media screen and (min-width: 600px){
+  
   #aboutPlants div{
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -326,6 +352,23 @@ header img{
 
 /* -----------------------MED SCREEN STYLES-------------------- */
 @media screen and (min-width: 700px){
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+  }
+
+  header a {
+    order: 1;
+  }
+
+  header h1 {
+    order: 2;
+  }
+
+  header nav {
+    order: 3;
+  }
+
   footer div{
     display: grid;
     grid-template-columns: 1fr 1fr;
